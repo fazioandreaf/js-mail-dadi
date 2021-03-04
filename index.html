@@ -42,13 +42,12 @@ Come detto in classe potete fare entrambi gli esercizi all'interno dello stesso 
         var elem = email[i];
         if (elem == emailUtente ) {
           messaggio= ('email gia esistente');
-          console.log('email gia esistente');
         }
       }
       document.getElementById('mainTitle').innerHTML= (messaggio);
     // 2 esercizio
-      var dadoUtente= Math.floor(Math.random()*6+1);
-      var dadoPc= Math.floor(Math.random()*6+1);
+      var dadoUtente= Math.round(Math.random() * 6);
+      var dadoPc= Math.round(Math.random() * 6);
       document.getElementById('dadoUtente').innerHTML= (dadoUtente);
       document.getElementById('dadoPc').innerHTML= (dadoPc);
       var messaggioResult=0;
@@ -57,7 +56,6 @@ Come detto in classe potete fare entrambi gli esercizi all'interno dello stesso 
       }else if (dadoUtente < dadoPc) {
         messaggioResult=("Ha vinto il pc");
       }else {
-
         messaggioResult=("Avete pareggiato");
       }
       document.getElementById('result').innerHTML= (messaggioResult);    </script>
