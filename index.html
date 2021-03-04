@@ -54,10 +54,12 @@ Come detto in classe potete fare entrambi gli esercizi all'interno dello stesso 
       var messaggioResult=0;
       if (dadoUtente > dadoPc) {
         messaggioResult=("Ha vinto l'utente");
-      }else {
+      }else if (dadoUtente < dadoPc) {
         messaggioResult=("Ha vinto il pc");
+      }else {
+
+        messaggioResult=("Avete pareggiato");
       }
-      messaggioResult=("Avete pareggiato");
       document.getElementById('result').innerHTML= (messaggioResult);    </script>
   </body>
 </html>
