@@ -25,9 +25,16 @@ Come detto in classe potete fare entrambi gli esercizi all'interno dello stesso 
   </head>
   <body>
     <div class="row">
-      <h1 id="mainTitle">CIAO</h1>
+      <h1 id="mainTitle">Registrazione utente</h1>
+      <p>
+        <h2>Let's play a dice game ! </h2>
+        <div>Dado utente <span id="dadoUtente" ></span></div>
+        <div>Dado Pc <span id="dadoPc"></span></div>
+        <div id="result"></div>
+      </p>
     </div>
     <script>
+    // 1 esercizio
       var emailUtente = prompt('Scrivi la tua email con cui vuoi accedere');
       var email =['fazioandrea@gmail.com', 'markinozumberk@gmail.com', 'angelafavolosacubista@hotmail.it']
       var messaggio = 'email nuova';
@@ -39,6 +46,24 @@ Come detto in classe potete fare entrambi gli esercizi all'interno dello stesso 
         }
       }
       document.getElementById('mainTitle').innerHTML= (messaggio);
+    // 2 esercizio
+      var dadoUtente= Math.floor(Math.random()*6+1);
+      var dadoPc= Math.floor(Math.random()*6+1);
+      document.getElementById('dadoUtente').innerHTML= (dadoUtente);
+      document.getElementById('dadoPc').innerHTML= (dadoPc);
+      var messaggioResult=0;
+
+      if (dadoUtente > dadoPc) {
+        messaggioResult=("Ha vinto l'utente");
+        console.log( "Ha vinto l'utente");
+      }else {
+        messaggioResult=("Ha vinto il pc");
+        console.log("Ha vinto il pc");
+
+      }
+      messaggioResult=("Avete pareggiato");
+      document.getElementById('result').innerHTML= (messaggioResult);
+
       // // uso degli array, posizione, lenght e push
       //   var arr = ['pippo', 10, 'topolino'];
       //   console.log('arr', typeof arr, arr);
